@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cursor nice to meet</title>
+<meta name="description" content="cursor nice to meet. מדריך בעברית: תיקיית my-first-site, שני סקילים מוכנים, ודף מקומי.">
+<link rel="icon" href="assets/images/LogoBanner.svg?v=20261108b">
+<link rel="stylesheet" href="assets/fonts/google/fonts.css?v=20261108b">
+<link rel="stylesheet" href="css/system.css?v=20261108b">
+<link rel="stylesheet" href="css/module.css?v=20261108b">
+<script src="assets/js/vendor/lucide.min.js?v=20261108b"></script>
+</head>
+<body>
+<a href="#mainContent" class="skip-link">דלגו לתוכן הראשי</a>
+<section class="hero" id="hero">
+  <div class="logo-bar"><img class="logo-bar-center" src="assets/images/LogoBanner.svg?v=20261108b" alt="Let's AI"></div>
+  <video class="hero-video" autoplay muted loop playsinline preload="auto"><source src="assets/videos/kling_intro.mp4?v=20261108b" type="video/mp4"></video>
+  <div class="hero-overlay"></div>
+  <div class="hero-side-fade left"></div>
+  <div class="hero-side-fade right"></div>
+  <div class="hero-content">
+    <div class="hero-badge" data-config="hero.badge"><i data-lucide="book-open" class="icon-sm"></i> תרגיל מעשי</div>
+    <h1><span class="hero-title-eyebrow" data-config="hero.eyebrow">CURSOR</span><br><span class="hero-title-main" data-config="hero.title">cursor nice to meet</span></h1>
+    <p class="hero-subtitle" data-config="hero.subtitle">תיקייה, שני סקילים, ודף</p>
+    <p data-config="hero.lead">מתקינים, פותחים תיקייה מוכנה בשם ⁦my⁠-⁠first⁠-⁠site⁩, מפעילים ⁦architect⁩ ואז ⁦designer⁩, ובודקים דף מקומי. הסקילים כבר כתובים בערכת התרגיל.</p>
+    <div class="hero-btn-wrap"><button type="button" class="hero-btn" data-config="hero.cta" onclick="startTutorial()">בואו נתחיל</button></div>
+  </div>
+</section>
+<div class="app" id="app">
+  <div class="logo-bar app-logo-bar">
+    <img class="logo-bar-center" src="assets/images/LogoBanner.svg?v=20261108b" alt="Let's AI">
+    <button type="button" class="menu-toggle" id="menuToggle" onclick="toggleSidebar()" aria-label="תפריט שלבים" aria-expanded="false"><i data-lucide="menu"></i></button>
+  </div>
+  <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="closeSidebar()"></div>
+  <div class="app-body">
+    <aside class="sidebar" id="sidebar" aria-label="ניווט בין שלבי המדריך">
+      <div class="side-progress-track"><div class="side-progress-fill" id="sideProgressFill" style="width:0%"></div></div>
+      <div class="side-progress-label" id="sideProgressLabel">1 / 11 שלבים</div>
+      <div class="nav-group"><div class="nav-group-label"><i data-lucide="folder-open" class="icon-sm"></i> הכנה</div><div class="side-steps"><button type="button" class="side-step active" style="--seg-color:#5CE1E6;" onclick="sideNav(1)"><span class="side-step-num">1</span><span>התקנה וכניסה</span></button><button type="button" class="side-step" style="--seg-color:#5CE1E6;" onclick="sideNav(2)"><span class="side-step-num">2</span><span>תיקיית התרגיל</span></button></div></div>
+<div class="nav-group"><div class="nav-group-label"><i data-lucide="panels-top-left" class="icon-sm"></i> חלון</div><div class="side-steps"><button type="button" class="side-step" style="--seg-color:#FFD6EE;" onclick="sideNav(3)"><span class="side-step-num">3</span><span>שלושה אזורים</span></button><button type="button" class="side-step" style="--seg-color:#FFD6EE;" onclick="sideNav(4)"><span class="side-step-num">4</span><span>תצוגה מקומית</span></button></div></div>
+<div class="nav-group"><div class="nav-group-label"><i data-lucide="hammer" class="icon-sm"></i> בנייה</div><div class="side-steps"><button type="button" class="side-step" style="--seg-color:#5CE1E6;" onclick="sideNav(5)"><span class="side-step-num">5</span><span>תוכנית</span></button><button type="button" class="side-step" style="--seg-color:#5CE1E6;" onclick="sideNav(6)"><span class="side-step-num">6</span><span>עיצוב ובנייה</span></button><button type="button" class="side-step" style="--seg-color:#5CE1E6;" onclick="sideNav(7)"><span class="side-step-num">7</span><span>הדף במחשב</span></button></div></div>
+<div class="nav-group"><div class="nav-group-label"><i data-lucide="split" class="icon-sm"></i> המשך</div><div class="side-steps"><button type="button" class="side-step" style="--seg-color:#FF5BC0;" onclick="sideNav(8)"><span class="side-step-num">8</span><span>שינוי ושיחה</span></button><button type="button" class="side-step" style="--seg-color:#FF5BC0;" onclick="sideNav(9)"><span class="side-step-num">9</span><span>בדיקת קבצים</span></button><button type="button" class="side-step" style="--seg-color:#FF5BC0;" onclick="sideNav(10)"><span class="side-step-num">10</span><span>סקיל וחוק</span></button></div></div>
+<div class="nav-group"><div class="nav-group-label"><i data-lucide="flag" class="icon-sm"></i> תרגול</div><div class="side-steps"><button type="button" class="side-step" style="--seg-color:#FFD6EE;" onclick="sideNav(11)"><span class="side-step-num">11</span><span>תרגול קצר</span></button></div></div>
+<div class="nav-group"><button type="button" class="side-gloss" id="glossBtn" aria-expanded="false" aria-controls="gloss" onclick="openGloss()"><span class="side-step-num"><i data-lucide="book-marked"></i></span><span>מילון מושגים</span></button></div>
+    </aside>
+    <main class="main-content" id="mainContent"><div class="step-container">
+      <div class="step active" id="step1"><div class="step-header"><span class="part-label">הכנה</span><br><span class="step-number">שלב ⁦1⁩</span><h2 class="step-title">מתקינים ו<span class="hl-underline">נכנסים</span></h2><p class="step-desc">קורסור הוא החלון שבו התיקייה, הקבצים והשיחה עם הסוכן יושבים יחד. בלי כניסה אין תרגיל.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-sway"><rect x="78" y="28" width="124" height="78" rx="18" fill="#fff" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M98 52h84M98 70h60" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">קורסור הוא עורך לפרויקטים עם סוכן שיכול לקרוא קבצים, להציע שינויים וליישם אותם. התרגיל מתחיל אחרי התקנה וכניסה. ההורדה היא מהאתר הרשמי, בעמוד ⁦cursor.com/download⁩, לפי המערכת של המחשב.</p></div>
+<div class="reveal"><div class="steps-list"><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">מתקינים</div><p>מורידים מהעמוד הרשמי, פותחים את קובץ ההתקנה, ומשלימים את הנחיות מערכת ההפעלה. אין כאן קישור קבוע לגרסה מספרית.</p></div></div><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">נכנסים</div><p>פותחים את קורסור ונכנסים כשמתבקשים. אם אין חשבון, דף העזרה מפנה להרשמה. במדריך הזה אין מחירון ואין הבטחת שימוש בלי גבול.</p></div></div><div class="step-card info"><img class="step-type-icon" src="assets/images/מוח%20ונורה%20איקון.svg?v=20261108b" alt="הסבר"><div class="step-card-body"><div class="step-who">מה אחר כך</div><p>פותחים את תיקיית התרגיל. במסך הפתיחה זו הפעולה ⁦Open project.⁩ בתפריט זו ⁦File⁩ ואז ⁦Open Folder.⁩ פותחים את השורש שבו נמצאת <bdi dir="ltr" class="ltr-path">.cursor</bdi>.</p></div></div></div></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>עושים עכשיו:</strong> נכנסים ל-⁦cursor.com/download⁩, מורידים את הקובץ שמתאים למחשב, מתקינים, ונכנסים לחשבון.<br><strong>מה אמור להיראות:</strong> נפתח מסך שאפשר ממנו לבחור תיקייה. הצילום של המסך הזה נמצא בשלב ⁦3.⁩ הוא דוגמה, לא הוכחה שההתקנה אצלכם הסתיימה.</div></div><div class="callout warning"><i data-lucide="triangle-alert" class="icon-sm"></i><div class="callout-body"><strong>הודעה מקרית:</strong> לפעמים מופיעה הודעה על נתיב חסר ואפשר לסגור אותה. היא לא חלק מהתרגיל.</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q1">
+      <div class="quiz-q">איזו פעולה מתחילה את התרגיל אחרי הכניסה?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">⁦Open project⁩, על התיקייה שהוכנה מראש.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">⁦Clone repo⁩, כדי להעתיק מאגר מהרשת.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">⁦Connect via SSH⁩, כדי להתחבר לשרת מרוחק.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. התרגיל חי בתיקייה על המחשב. פותחים אותה עם ⁦Open project.⁩" data-no="⁦Clone repo⁩ וחיבור ⁦SSH⁩ מופיעים באותו מסך, והם לא המסלול של התרגיל הזה."></p>
+    </div></div>
+</div>
+<div class="step" id="step2"><div class="step-header"><span class="part-label">הכנה</span><br><span class="step-number">שלב ⁦2⁩</span><h2 class="step-title">תיקייה <span class="hl-underline">מוכנה</span> לתרגיל</h2><p class="step-desc">התרגיל מתחיל מתיקייה בשם ⁦my⁠-⁠first⁠-⁠site.⁩ שני הסקילים כבר כתובים. לא כותבים אותם בעצמכם.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-float"><path d="M36 50h48l12 12h132a14 14 0 0 1 14 14v34a14 14 0 0 1-14 14H50a14 14 0 0 1-14-14V64a14 14 0 0 1 14-14z" fill="#FFD6EE" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="156" y="36" width="70" height="28" rx="10" fill="#5CE1E6" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">מורידים את קובץ הערכה, פותחים אותו, ונכנסים לתיקייה הפנימית ⁦my⁠-⁠first⁠-⁠site.⁩ רק שני פריטים יושבים זה לצד זה בתוך התיקייה הזו: <bdi dir="ltr" class="ltr-path">.cursor</bdi> ו-⁦assets.⁩ הסקילים נמצאים בתוך <bdi dir="ltr" class="ltr-path">.cursor/skills</bdi>, לא ליד ⁦assets.⁩</p></div>
+<div class="reveal"><div class="mini-carousel" data-carousel="c2"><div class="mini-carousel-track"><div class="mini-carousel-slide active">
+      <div class="screenshot-frame zoomable">
+        <img src="assets/screens/crop-2655.png?v=20261108b" alt="עץ קבצים: .cursor ו-assets בתוך תיקיית הפרויקט">
+        <button type="button" class="zoom-btn" onclick="openLightbox(this)" aria-label="הגדלת התמונה"><i data-lucide="search"></i></button>
+      </div>
+      <p class="screenshot-caption"><i data-lucide="image"></i> דוגמה לצורת העץ. בתוך תיקיית הפרויקט יש שני פריטים צמודים: <bdi dir="ltr" class="ltr-path">.cursor</bdi> ו-⁦assets. architect⁩ ו-⁦designer⁩ נמצאים בתוך <bdi dir="ltr" class="ltr-path">.cursor/skills</bdi>, לא ליד ⁦assets.⁩ בצילום אין את קובץ ההסבר של הערכה, ואין בו תמונות שלכם.</p>
+    </div></div></div></div>
+<div class="reveal"><div class="tree">⁦my⁠-⁠first⁠-⁠site⁩<br>  <bdi dir="ltr" class="ltr-path">.cursor/skills/architect/SKILL.md</bdi><br>  <bdi dir="ltr" class="ltr-path">.cursor/skills/designer/SKILL.md</bdi><br>  ⁦assets/README.md⁩</div></div>
+<div class="reveal"><div class="steps-list"><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">שומרים ופותחים</div><p>שומרים את ⁦exercise⁠-⁠kit.zip⁩ במקום שתמצאו, למשל מסמכים. מחלצים את הקובץ. נכנסים פנימה עד לתיקייה ששמה ⁦my⁠-⁠first⁠-⁠site.⁩ לא עוצרים על שם קובץ הזיפ.</p></div></div><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">בודקים את התוכן</div><p>בתוך ⁦my⁠-⁠first⁠-⁠site⁩ רואים <bdi dir="ltr" class="ltr-path">.cursor</bdi> ו-⁦assets.⁩ בתוך <bdi dir="ltr" class="ltr-path">.cursor/skills</bdi> יש ⁦architect⁩ ו-⁦designer⁩, ובכל אחד רק ⁦SKILL.md.⁩ ב-⁦assets⁩ יש ⁦README.md⁩ ואין תמונות.</p></div></div><div class="step-card info"><img class="step-type-icon" src="assets/images/מוח%20ונורה%20איקון.svg?v=20261108b" alt="הסבר"><div class="step-card-body"><div class="step-who">תמונות שלכם</div><p>אם יש לכם תמונה מותרת, שומרים אותה ב-⁦assets⁩ בשם פשוט, למשל ⁦hero.png.⁩ אין בערכה תמונות מוכנות, ואין לשים כאן חומר של לקוח. בלי תמונה, הדף עדיין יכול להיבנות.</p></div></div></div></div>
+<div class="reveal"><div class="concept-row two"><div class="concept-card" tabindex="0" role="button" aria-label=".cursor ו-assets">
+          <div class="concept-card-inner">
+            <div class="concept-front"><div class="concept-eyebrow">שני אחים</div><div class="concept-term concept-he"><bdi dir="ltr" class="ltr-path">.cursor</bdi> ו-⁦assets⁩</div><div class="concept-hint">לחצו לפירוש</div></div>
+            <div class="concept-back">רק שני אלה צמודים בתוך ⁦my⁠-⁠first⁠-⁠site.⁩ הסקילים יושבים עמוק יותר, ב-<bdi dir="ltr" class="ltr-path">.cursor/skills</bdi>.</div>
+          </div></div><div class="concept-card" tabindex="0" role="button" aria-label="רק SKILL.md">
+          <div class="concept-card-inner">
+            <div class="concept-front"><div class="concept-eyebrow">סקיל מוכן</div><div class="concept-term concept-he">רק ⁦SKILL.md⁩</div><div class="concept-hint">לחצו לפירוש</div></div>
+            <div class="concept-back">כל סקיל בערכה הוא קובץ אחד. אין תיקיית ⁦references⁩ ואין תיקיית ⁦scripts.⁩</div>
+          </div></div></div></div>
+<div class="reveal"><p class="lead-note">בדרך כלל סוכן יכול לבחור סקיל בעצמו לפי התיאור. שני הסקילים בערכה מסומנים ⁦disable⁠-⁠model⁠-⁠invocation: true.⁩ בגלל השדה הזה, ולא בגלל שהתיאור מזכיר סלאש, מפעילים אותם רק כשבוחרים אותם במפורש.</p></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>ערכת התרגיל:</strong> הזיפ כולל את שני קובצי הסקיל ואת תיקיית ⁦assets⁩ עם הסבר. זו ערכת התרגיל, לא עותק בתים של הקלטה.<br><strong>מה אמור להיראות:</strong> אחרי החילוץ, פתיחת התיקייה הפנימית מראה <bdi dir="ltr" class="ltr-path">.cursor</bdi> ו-⁦assets⁩ זה לצד זה.</div></div></div>
+<div class="reveal"><a class="kit-link" href="exercise-kit.zip" download><i data-lucide="download"></i><span>הורדת ערכת התרגיל</span></a></div>
+<div class="reveal"><div class="quiz-card" id="q2">
+      <div class="quiz-q">איפה יושבת תיקיית ⁦assets⁩ בתרגיל?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">בתוך ⁦my⁠-⁠first⁠-⁠site⁩, כאחות של <bdi dir="ltr" class="ltr-path">.cursor</bdi>.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">בתוך <bdi dir="ltr" class="ltr-path">.cursor/skills</bdi>, ליד ⁦architect.⁩</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">במקום ⁦SKILL.md⁩, כי צריך גם ⁦references⁩ ו-⁦scripts.⁩</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. ⁦assets⁩ ו-⁦.cursor⁩ הם אחים בתוך ⁦my⁠-⁠first⁠-⁠site.⁩ בכל סקיל יש רק ⁦SKILL.md.⁩" data-no="⁦assets⁩ לא נכנסת לתיקיית הסקיל. בערכה הזו אין ⁦references⁩ ואין ⁦scripts.⁩"></p>
+    </div></div>
+</div>
+<div class="step" id="step3"><div class="step-header"><span class="part-label">חלון</span><br><span class="step-number">שלב ⁦3⁩</span><h2 class="step-title">פותחים ומזהים <span class="hl-underline">שלושה אזורים</span></h2><p class="step-desc">⁦Open project⁩ בוחר את תיקיית העבודה. אחר כך מזהים עץ קבצים, עורך, ושיחת ⁦Agent.⁩</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-sway"><rect x="22" y="36" width="68" height="64" rx="14" fill="#5CE1E6" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="106" y="36" width="68" height="64" rx="14" fill="#fff" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="190" y="36" width="68" height="64" rx="14" fill="#FFD6EE" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">פותחים את שורש ⁦my⁠-⁠first⁠-⁠site.⁩ הפתיחה לא מפרסמת אתר, והיא גם לא ארגז אבטחה. התיקייה היא הקשר העבודה. הסוכן יכול לחפש ולקרוא קבצים שרלוונטיים לבקשה. אין פירוש הדבר שכל הקבצים נטענים לכל הודעה.</p></div>
+<div class="reveal"><div class="shield-stack"><button type="button" class="shield-layer l1" aria-expanded="false" onclick="shieldPick(this)">
+          <div class="shield-layer-title"><span>עץ הקבצים</span><i data-lucide="chevron-down" class="shield-layer-chevron"></i></div>
+          <div class="shield-layer-desc">בודקים שפתוחה ⁦my⁠-⁠first⁠-⁠site.⁩ לחיצה על קובץ פותחת אותו. בהמשך מופיעים כאן ⁦PLAN.md⁩, ⁦DESIGN.md⁩, ⁦index.html⁩ ו-⁦style.css.⁩</div></button><button type="button" class="shield-layer l2" aria-expanded="false" onclick="shieldPick(this)">
+          <div class="shield-layer-title"><span>העורך</span><i data-lucide="chevron-down" class="shield-layer-chevron"></i></div>
+          <div class="shield-layer-desc">כאן רואים את תוכן הקובץ. קוראים את התוכנית לפני שמפעילים את המעצב.</div></button><button type="button" class="shield-layer l3" aria-expanded="false" onclick="shieldPick(this)">
+          <div class="shield-layer-title"><span>⁦Agent⁩</span><i data-lucide="chevron-down" class="shield-layer-chevron"></i></div>
+          <div class="shield-layer-desc">כאן כותבים בקשה. במצב ⁦Agent⁩ הסוכן יכול גם לכתוב קבצים. מצב ⁦Ask⁩ מיועד להסבר בלי עריכה, והוא תרגיל נפרד.</div></button></div></div>
+<div class="reveal"><div class="mini-carousel" data-carousel="c3"><div class="mini-carousel-track"><div class="mini-carousel-slide active">
+      <div class="screenshot-frame zoomable">
+        <img src="assets/screens/crop-0530.png?v=20261108b" alt="מסך פתיחה עם Open project">
+        <button type="button" class="zoom-btn" onclick="openLightbox(this)" aria-label="הגדלת התמונה"><i data-lucide="search"></i></button>
+      </div>
+      <p class="screenshot-caption"><i data-lucide="image"></i> במסך הפתיחה בוחרים ⁦Open project. Clone repo⁩, ⁦SSH⁩ ו-⁦Start from iOS⁩ לא שייכים לתרגיל.</p>
+    </div><div class="mini-carousel-slide">
+      <div class="screenshot-frame zoomable">
+        <img src="assets/screens/crop-1830.png?v=20261108b" alt="חלון שיחה במצב Agent">
+        <button type="button" class="zoom-btn" onclick="openLightbox(this)" aria-label="הגדלת התמונה"><i data-lucide="search"></i></button>
+      </div>
+      <p class="screenshot-caption"><i data-lucide="image"></i> חלון השיחה במצב ⁦Agent.⁩ מכאן מפעילים סקיל אחרי שהתיקייה פתוחה.</p>
+    </div></div><div class="mini-carousel-nav">
+          <button type="button" class="mini-carousel-btn" onclick="carouselNav('c3', -1)" disabled aria-label="תמונה קודמת"><i data-lucide="chevron-right"></i></button>
+          <span class="mini-carousel-progress"><span class="mini-carousel-current">⁦1⁩</span> / ⁦2⁩</span>
+          <button type="button" class="mini-carousel-btn" onclick="carouselNav('c3', 1)" aria-label="תמונה הבאה"><i data-lucide="chevron-left"></i></button>
+        </div><div class="mini-carousel-dots"><span class="mini-carousel-dot active"></span><span class="mini-carousel-dot"></span></div></div></div>
+<div class="reveal"><div class="quiz-card" id="q3">
+      <div class="quiz-q">מה קורה ברגע שפותחים את ⁦my⁠-⁠first⁠-⁠site⁩?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">קורסור עובד בתוך התיקייה. האתר עדיין לא נבנה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">האתר מתפרסם לכתובת ציבורית.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">התיקייה נמחקת ונפתחת שיחה ריקה בלי קבצים.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. הפתיחה בוחרת את מקום העבודה. הקבצים של הדף מגיעים אחרי ⁦architect⁩ ואחרי ⁦designer.⁩" data-no="פתיחת תיקייה אינה פרסום, והקבצים שכבר בתיקייה נשארים."></p>
+    </div></div>
+</div>
+<div class="step" id="step4"><div class="step-header"><span class="part-label">חלון</span><br><span class="step-number">שלב ⁦4⁩</span><h2 class="step-title"><span class="hl-underline"><bdi dir="ltr">⁦Live Preview⁩</bdi></span> לתרגיל</h2><p class="step-desc">כדי לראות את הדף שנוצר, פותחים את ⁦index.html⁩ בתוסף ⁦Live Preview⁩ של ⁦Microsoft.⁩</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-float"><rect x="48" y="30" width="150" height="78" rx="16" fill="#fff" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 50h150" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="70" y="64" width="106" height="28" rx="8" fill="#5CE1E6" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">עכשיו מתקינים את התוסף. את התצוגה עצמה פותחים רק בשלב ⁦7⁩, אחרי ש-⁦index.html⁩ קיים. השם המוצג הוא ⁦Live Preview.⁩ המפרסם בעמוד הרשמי של ⁦Microsoft⁩ הוא ⁦ms⁠-⁠vscode⁩, והמזהה הוא ⁦ms⁠-⁠vscode.live⁠-⁠server.⁩ זה לא ⁦Live Server.⁩</p></div>
+<div class="reveal"><div class="steps-list"><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">פותחים הרחבות</div><p>ב-⁦Windows⁩ וב-⁦Linux: Ctrl+Shift+X.⁩ ב-⁦Mac: Cmd+Shift+X.⁩ מחפשים ⁦Live Preview.⁩</p></div></div><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">מזהים ומתקינים</div><p>פותחים את התוצאה שהמפרסם שלה ⁦ms⁠-⁠vscode⁩ והמזהה ⁦ms⁠-⁠vscode.live⁠-⁠server.⁩ לוחצים ⁦Install. Live Server⁩, עם ⁦Go Live⁩, הוא תוסף אחר.</p></div></div><div class="step-card info"><img class="step-type-icon" src="assets/images/מוח%20ונורה%20איקון.svg?v=20261108b" alt="הסבר"><div class="step-card-body"><div class="step-who">הצילום אינו המחשב שלכם</div><p>התמונות מראות איך דף התוסף נראה. הן לא מוכיחות שהוא מותקן אצלכם. הבדיקה היא ברשימת ההרחבות במחשב שלכם.</p></div></div></div></div>
+<div class="reveal"><div class="flip-grid pair"><div class="flip-card" tabindex="0" role="button" aria-label="פלטת פקודות">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>פלטת פקודות</h4><p>עוד לא מפעילים תצוגה</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">ב-⁦Windows⁩ וב-⁦Linux: Ctrl+Shift+P.⁩ ב-⁦Mac: Cmd+Shift+P.⁩ בשלב ⁦7⁩ בוחרים משם את פקודת התצוגה. עכשיו רק בודקים שהפלטה נפתחת.</div>
+          </div></div><div class="flip-card" tabindex="0" role="button" aria-label="לא אותו תוסף">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>לא אותו תוסף</h4><p>⁦Live Server⁩</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">הפקודה שלו היא ⁦Go Live.⁩ לא מחליפים אותו ב-⁦Live Preview⁩ בגלל דמיון בשם.</div>
+          </div></div><div class="flip-card" tabindex="0" role="button" aria-label="איך מתרענן">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>איך מתרענן</h4><p>כל שינוי בעורך</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">ברירת המחדל מרעננת את התצוגה גם לפני שמירה לקובץ. שמירה היא פעולה נפרדת.</div>
+          </div></div><div class="flip-card" tabindex="0" role="button" aria-label="איזו כתובת">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>איזו כתובת</h4><p>מה שמופיע</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">הפורט ההתחלתי הוא ⁦3000⁩, והוא יכול להתחלף. משתמשים בכתובת שהתוסף מציג. לסיום: ⁦Live Preview: Stop Server.⁩</div>
+          </div></div></div></div>
+<div class="reveal"><div class="mini-carousel" data-carousel="c4"><div class="mini-carousel-track"><div class="mini-carousel-slide active">
+      <div class="screenshot-frame zoomable">
+        <img src="assets/screens/crop-3057.png?v=20261108b" alt="דף התוסף Live Preview">
+        <button type="button" class="zoom-btn" onclick="openLightbox(this)" aria-label="הגדלת התמונה"><i data-lucide="search"></i></button>
+      </div>
+      <p class="screenshot-caption"><i data-lucide="image"></i> דוגמה לדף ⁦Live Preview⁩ אצל מפרסם ⁦ms⁠-⁠vscode.⁩ זו לא הוכחה שהתוסף מותקן במחשב שלכם.</p>
+    </div><div class="mini-carousel-slide">
+      <div class="screenshot-frame zoomable">
+        <img src="assets/screens/crop-2857.png?v=20261108b" alt="חיווי על Live Preview ליד תוספים אחרים">
+        <button type="button" class="zoom-btn" onclick="openLightbox(this)" aria-label="הגדלת התמונה"><i data-lucide="search"></i></button>
+      </div>
+      <p class="screenshot-caption"><i data-lucide="image"></i> החיווי הוא על ⁦Live Preview⁩ מאת ⁦ms⁠-⁠vscode. Live Server⁩ נשאר פריט אחר ברשימה.</p>
+    </div></div><div class="mini-carousel-nav">
+          <button type="button" class="mini-carousel-btn" onclick="carouselNav('c4', -1)" disabled aria-label="תמונה קודמת"><i data-lucide="chevron-right"></i></button>
+          <span class="mini-carousel-progress"><span class="mini-carousel-current">⁦1⁩</span> / ⁦2⁩</span>
+          <button type="button" class="mini-carousel-btn" onclick="carouselNav('c4', 1)" aria-label="תמונה הבאה"><i data-lucide="chevron-left"></i></button>
+        </div><div class="mini-carousel-dots"><span class="mini-carousel-dot active"></span><span class="mini-carousel-dot"></span></div></div></div>
+<div class="reveal"><p class="prompt-label">פקודות לשימוש בשלב ⁦7⁩, כל אחת בשורה נפרדת</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">⁦Live Preview: Show Preview⁩ (⁦Internal Browser⁩)
+⁦Live Preview: Show Preview⁩ (⁦External Browser⁩)
+⁦Live Preview: Stop Server⁩</span></div></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>מה אמור להיראות עכשיו:</strong> אחרי ⁦Install⁩, ⁦Live Preview⁩ מופיע אצלכם כהרחבה מותקנת. את הדף עצמו עדיין אין. את הפקודה מפעילים בשלב ⁦7.⁩</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q4">
+      <div class="quiz-q">איזה תוסף פותח את ⁦index.html⁩ בתרגיל הזה?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">⁦Live Preview⁩ מאת ⁦ms⁠-⁠vscode.⁩</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">⁦Live Server⁩, כי השם דומה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">כל תוסף שמותקן חייב להיות פעיל כדי שהסקילים יעבדו.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. ערכת התרגיל מסיימת בפתיחת ⁦index.html⁩ ב-⁦Live Preview.⁩ תוספים אחרים אינם תנאי להפעלת ⁦architect⁩ ו-⁦designer.⁩" data-no="⁦Live Server⁩ הוא תוסף אחר. הסקילים עצמם לא תלויים בכל התוספים שמותקנים במחשב."></p>
+    </div></div>
+</div>
+<div class="step" id="step5"><div class="step-header"><span class="part-label">בנייה</span><br><span class="step-number">שלב ⁦5⁩</span><h2 class="step-title">שאלות, ואז <span class="hl-underline"><bdi dir="ltr">⁦PLAN.md⁩</bdi></span></h2><p class="step-desc">⁦architect⁩ שואל שלוש שאלות בעברית וכותב תוכנית באנגלית. הוא לא כותב את קוד האתר.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-sway"><rect x="70" y="22" width="140" height="90" rx="16" fill="#fff" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M92 48h96M92 66h70M92 84h80" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">⁦architect⁩ ו-⁦designer⁩ הם שמות הסקילים שבערכה, לא פקודות מובנות בכל התקנה. סוכן יכול לבחור סקיל אחר לבד לפי התיאור. כאן השדה ⁦disable⁠-⁠model⁠-⁠invocation⁩ שווה ⁦true⁩, ולכן את שני אלה בוחרים במפורש. ⁦architect⁩ מתכנן לפני קוד: שלוש שאלות בעברית, ואז רק ⁦PLAN.md⁩ באנגלית.</p></div>
+<div class="reveal"><div class="settings-accordion"><div class="settings-item open">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="true">
+            <div class="settings-icon"><i data-lucide="circle-help"></i></div>
+            <div class="settings-item-title">שאלה ⁦1:⁩ מה האתר</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>למשל דף נחיתה לעסק, תיק עבודות, דף אירוע, או אחר. עונים, ומחכים לשאלה הבאה.</p></div></div></div><div class="settings-item">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="false">
+            <div class="settings-icon"><i data-lucide="users"></i></div>
+            <div class="settings-item-title">שאלה ⁦2:⁩ למי, ומה עושים</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>למי האתר מיועד, ומה הפעולה החשובה שהגולש צריך לעשות.</p></div></div></div><div class="settings-item">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="false">
+            <div class="settings-icon"><i data-lucide="layout-list"></i></div>
+            <div class="settings-item-title">שאלה ⁦3:⁩ אילו חלקים</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>אילו חלקים חייבים להיות בעמוד, למשל כותרת, שירותים, המלצות או טופס.</p></div></div></div><div class="settings-item">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="false">
+            <div class="settings-icon"><i data-lucide="file-text"></i></div>
+            <div class="settings-item-title">מה נכתב ב-⁦PLAN.md⁩</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>באנגלית, בערך ⁦30⁩ עד ⁦60⁩ שורות: סקירה, ⁦HTML⁩ ו-⁦CSS⁩ פשוטים בעברית מימין לשמאל, סדר החלקים, שלושה שלבים, ומדדי קבלה. אם חסרה תשובה, הסקיל כתוב להניח הנחה סבירה ולרשום אותה.</p></div></div></div></div></div>
+<div class="reveal"><p class="prompt-label">מעתיקים לשיחה. הסלאש בוחר את הסקיל</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">/⁦architect⁩
+אני רוצה דף נחיתה של עמוד אחד. תשאלו שאלה אחת בכל פעם, ואז כתבו רק ⁦PLAN.md.⁩</span></div><p class="prompt-label">המשפט שבסוף קובץ ⁦architect⁩</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">התוכנית מוכנה ב-⁦PLAN.md.⁩ השלב הבא: כתבו /⁦designer⁩ כדי לבחור עיצוב ולבנות את האתר.</span></div></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>עושים ומסמנים הצלחה:</strong> עונים על שלוש השאלות. בעץ הקבצים מופיע ⁦PLAN.md⁩ בשורש, באנגלית. ⁦index.html⁩ עדיין לא אמור להיות שם.</div></div><div class="callout warning"><i data-lucide="triangle-alert" class="icon-sm"></i><div class="callout-body"><strong>טעות נפוצה:</strong> לחפש את הדף מיד אחרי הסקיל ⁦architect.⁩ הסקיל הזה לא כותב קוד אתר.</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q5">
+      <div class="quiz-q">מה ⁦architect⁩ כותב בסוף שלוש השאלות?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">⁦PLAN.md⁩ באנגלית, בלי קוד האתר.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">⁦index.html⁩ ו-⁦style.css.⁩</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">קובץ חוק בתוך <bdi dir="ltr" class="ltr-path">.cursor/rules</bdi>.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. התוכנית באנגלית, והאתר עצמו נבנה רק אחרי ⁦designer.⁩" data-no="⁦architect⁩ לא בונה את הדף ולא יוצר חוק. בודקים ש-⁦PLAN.md⁩ נמצא בשורש."></p>
+    </div></div>
+</div>
+<div class="step" id="step6"><div class="step-header"><span class="part-label">בנייה</span><br><span class="step-number">שלב ⁦6⁩</span><h2 class="step-title">כיוון, ואז <span class="hl-underline">הדף</span></h2><p class="step-desc">⁦designer⁩ קורא את התוכנית, מציע שלושה כיוונים ועוד בחירה חופשית, ואחרי הבחירה בונה את הדף.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-float"><circle cx="86" cy="64" r="26" fill="#5CE1E6" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="140" cy="52" r="22" fill="#FFD6EE" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="188" cy="70" r="28" fill="#FF5BC0" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">⁦designer⁩ נפתח אחרי שיש ⁦PLAN.md.⁩ הוא קורא את התוכנית ולא שואל שוב מה שכבר כתוב בה. הוא מציע שלושה כיוונים ועוד אפשרות אחר, ומחכה לבחירה. בערכה הזו, אחרי הבחירה, הוא עצמו כותב את ⁦index.html⁩, את ⁦style.css⁩ ואת ⁦DESIGN.md.⁩ אין כאן בקשה נפרדת מסוג אל תבנו עכשיו, ואין יצירה אוטומטית של חוק.</p></div>
+<div class="reveal"><div class="fan-block" id="fan6">
+      <div class="card-fan-wrap"><div class="card-fan"><button type="button" class="fan-card c1 active" data-panel="fan6-0" aria-pressed="true" onclick="fanPick(this)"><h4>כיוון ⁦1⁩</h4><p>שם, מצב רוח, צבעים, גופן.</p></button><button type="button" class="fan-card c2" data-panel="fan6-1" aria-pressed="false" onclick="fanPick(this)"><h4>כיוון ⁦2⁩</h4><p>אותו מבנה, אופי אחר.</p></button><button type="button" class="fan-card c3" data-panel="fan6-2" aria-pressed="false" onclick="fanPick(this)"><h4>כיוון ⁦3⁩</h4><p>המלצה אחת מסומנת.</p></button><button type="button" class="fan-card c4" data-panel="fan6-3" aria-pressed="false" onclick="fanPick(this)"><h4>אחר</h4><p>ניסוח משלכם.</p></button></div></div>
+      <div class="fan-panels"><div class="fan-panel active" data-panel="fan6-0"><h3>שלושה כיוונים</h3><p>לכל כיוון: שם, שורת מצב רוח, שלושה או ארבעה צבעי ⁦HEX⁩, וגופן עברי כמו ⁦Heebo⁩, ⁦Assistant⁩ או ⁦Rubik.⁩ השמות יכולים להשתנות. מחכים לבחירה.</p></div><div class="fan-panel" data-panel="fan6-1"><h3>אחרי הבחירה</h3><p>נוצרים ⁦index.html⁩ ו-⁦style.css⁩ לפי התוכנית והכיוון. העמוד בעברית, ⁦dir rtl⁩, מתאים לטלפון ולמחשב, עם משתני ⁦CSS⁩, כפתור ברור בכל אזור, ניגודיות ותוויות. אם יש ⁦assets⁩, התמונות נכנסות עם טקסט חלופי בעברית.</p></div><div class="fan-panel" data-panel="fan6-2"><h3>⁦DESIGN.md⁩</h3><p>נוסף קובץ קצר באנגלית: הכיוון, הצבעים, הגופנים, הריווח וסגנון הכפתור.</p></div><div class="fan-panel" data-panel="fan6-3"><h3>מה לא נוצר</h3><p>הסקיל כתוב לא ליצור ולא לערוך שום דבר בתוך <bdi dir="ltr" class="ltr-path">.cursor/rules</bdi>. אין חוק אוטומטי בסוף העיצוב.</p></div></div></div></div>
+<div class="reveal"><div class="receipt-row four"><button type="button" class="receipt-card" aria-expanded="false" onclick="receiptPick(this)">
+          <div class="receipt-eyebrow">אחרי בחירה</div><div class="receipt-title">⁦index.html⁩</div><div class="receipt-desc">העמוד עצמו, בעברית ומימין לשמאל.</div></button><button type="button" class="receipt-card" aria-expanded="false" onclick="receiptPick(this)">
+          <div class="receipt-eyebrow">אחרי בחירה</div><div class="receipt-title">⁦style.css⁩</div><div class="receipt-desc">העיצוב, עם משתנים לצבעים ולגופנים.</div></button><button type="button" class="receipt-card" aria-expanded="false" onclick="receiptPick(this)">
+          <div class="receipt-eyebrow">אחרי בחירה</div><div class="receipt-title">⁦DESIGN.md⁩</div><div class="receipt-desc">סיכום הכיוון באנגלית.</div></button><button type="button" class="receipt-card" aria-expanded="false" onclick="receiptPick(this)">
+          <div class="receipt-eyebrow">לא בערכה</div><div class="receipt-title">בלי חוק</div><div class="receipt-desc">אין ⁦design.mdc⁩ ואין עריכה של <bdi dir="ltr" class="ltr-path">.cursor/rules</bdi> בשלב הזה.</div></button></div></div>
+<div class="reveal"><p class="prompt-label">מעתיקים לשיחה אחרי שיש ⁦PLAN.md.⁩ הסלאש בוחר את הסקיל</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">/⁦designer⁩
+קראו את ⁦PLAN.md.⁩ הציעו שלושה כיוונים ואפשרות אחר. אחרי הבחירה שלי כתבו ⁦index.html⁩, ⁦style.css⁩ ו-⁦DESIGN.md.⁩ אל תיצרו חוק.</span></div><p class="prompt-label">המשפט שבסוף קובץ ⁦designer⁩</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">האתר מוכן. פתחו את ⁦index.html⁩ ב-⁦Live Preview⁩ כדי לראות אותו.</span></div></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>מה אמור להיראות:</strong> אחרי הבחירה יש בשורש ⁦index.html⁩, ⁦style.css⁩ ו-⁦DESIGN.md.⁩ אין קובץ חדש ב-<bdi dir="ltr" class="ltr-path">.cursor/rules</bdi>.</div></div><div class="callout warning"><i data-lucide="triangle-alert" class="icon-sm"></i><div class="callout-body"><strong>אם קובץ חסר:</strong> מבקשים להמשיך מ-⁦PLAN.md⁩ ומהכיוון שכבר נבחר. זו השלמה של אותו שלב, לא תרגיל בנייה שני.</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q6">
+      <div class="quiz-q">מה קורה אחרי שבוחרים כיוון עיצוב?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">נכתבים ⁦index.html⁩, ⁦style.css⁩ ו-⁦DESIGN.md.⁩</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">נעצרים ב-⁦DESIGN.md⁩ ומחכים לבקשת בנייה נפרדת כחובה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">נוצר חוק עיצוב קבוע ב-<bdi dir="ltr" class="ltr-path">.cursor/rules</bdi>.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. בערכה הזו הבנייה היא חלק מהסקיל ⁦designer⁩, מיד אחרי הבחירה. חוק לא נוצר שם." data-no="בקשת בנייה נפרדת אינה שלב חובה, וחוק אינו תוצר של המעצב הזה."></p>
+    </div></div>
+</div>
+<div class="step" id="step7"><div class="step-header"><span class="part-label">בנייה</span><br><span class="step-number">שלב ⁦7⁩</span><h2 class="step-title">רואים את הדף <span class="hl-underline">במחשב</span></h2><p class="step-desc">התצוגה מקומית. טופס על הדף הוא חלק מהעמוד, והוא לא מוכיח שרת ששומר פניות.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-sway"><rect x="46" y="26" width="188" height="82" rx="16" fill="#fff" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 48h188" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="78" y="64" width="120" height="16" rx="8" fill="#FFD6EE" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">עכשיו, כש-⁦index.html⁩ קיים, פותחים את פלטת הפקודות ובוחרים את הפקודה של התצוגה הפנימית. הכתובת היא זו שהתוסף מציג על המחשב. לא מקלידים ⁦3000⁩ אם המסך מראה פורט אחר.</p></div>
+<div class="reveal"><p class="prompt-label">הפקודה עכשיו</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">⁦Live Preview: Show Preview⁩ (⁦Internal Browser⁩)</span></div></div>
+<div class="reveal"><div class="mini-carousel" data-carousel="c7"><div class="mini-carousel-track"><div class="mini-carousel-slide active">
+      <div class="screenshot-frame zoomable">
+        <img src="assets/screens/crop-4340.png?v=20261108b" alt="טופס בדף מקומי: שדות ריקים וכפתור">
+        <button type="button" class="zoom-btn" onclick="openLightbox(this)" aria-label="הגדלת התמונה"><i data-lucide="search"></i></button>
+      </div>
+      <p class="screenshot-caption"><i data-lucide="image"></i> דוגמה לדף שנבנה ונפתח מקומית: אזור איך זה עובד, שדות שם, טלפון ואימייל, וכפתור. השדות הריקים הם הממשק של העמוד.</p>
+    </div></div></div></div>
+<div class="reveal"><div class="concept-row two"><div class="concept-card" tabindex="0" role="button" aria-label="חזית העמוד">
+          <div class="concept-card-inner">
+            <div class="concept-front"><div class="concept-eyebrow">מה רואים</div><div class="concept-term concept-he">חזית העמוד</div><div class="concept-hint">לחצו לפירוש</div></div>
+            <div class="concept-back">כפתור, תוויות ושדות הם חלק מ-⁦index.html⁩ ומ-⁦style.css.⁩ את זה בודקים מול התוכנית.</div>
+          </div></div><div class="concept-card" tabindex="0" role="button" aria-label="שמירה בשרת">
+          <div class="concept-card-inner">
+            <div class="concept-front"><div class="concept-eyebrow">מה לא רואים</div><div class="concept-term concept-he">שמירה בשרת</div><div class="concept-hint">לחצו לפירוש</div></div>
+            <div class="concept-back">תמונה של טופס לא מראה שפנייה נשמרת. הערכה הזו לא מבטיחה ⁦backend.⁩</div>
+          </div></div></div></div>
+<div class="reveal"><div class="quiz-card" id="q7">
+      <div class="quiz-q">מה מותר להסיק מטופס שמופיע בדף המקומי?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">העמוד מציג טופס. אין כאן הוכחה ששרת שומר את הפרטים.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">כל טופס שנכתב כך אינו יכול לעבוד לעולם.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">השדות הריקים מוכיחים שההרשמה כבר נשמרה.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. בודקים את מה שהעמוד מראה. חיבור לשרת הוא שאלה אחרת, והוא לא חלק מהערכה הזו." data-no="שדות ריקים אינם הרשמה שנשמרה, וגם אין כאן קביעה על כל טופס עתידי."></p>
+    </div></div>
+</div>
+<div class="step" id="step8"><div class="step-header"><span class="part-label">המשך</span><br><span class="step-number">שלב ⁦8⁩</span><h2 class="step-title">שינוי אחד, <span class="hl-underline">הקבצים נשארים</span></h2><p class="step-desc">שיחה חדשה מתאימה למשימה חדשה. התיקייה לא מתאפסת כשפותחים שיחה.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-float"><rect x="36" y="40" width="90" height="48" rx="16" fill="#5CE1E6" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><rect x="150" y="40" width="96" height="48" rx="16" fill="#FFD6EE" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">שינוי אחד הוא בקשה אחת שאפשר לבדוק. ליטוש של אותו דף נשאר בשיחה הנוכחית. למשימה אחרת פותחים שיחה חדשה בשם ⁦New Chat.⁩ זו לא שיחת צד: פלוס בפאנל יכול לפתוח ⁦Side Chat⁩, ששומר הקשר מהשיחה הקודמת. הקבצים בתיקייה לא נמחקים.</p></div>
+<div class="reveal"><div class="flip-grid pair"><div class="flip-card" tabindex="0" role="button" aria-label="אותה שיחה">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>אותה שיחה</h4><p>ליטוש של הדף</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">כשמשנים פרט אחד, ממשיכים כאן. אפשר לצרף קובץ עם @ ואז את שמו, למשל ⁦PLAN.md⁩, ולבחור אותו מההצעות.</div>
+          </div></div><div class="flip-card" tabindex="0" role="button" aria-label="New Chat">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>⁦New Chat⁩</h4><p>משימה אחרת</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">ב-⁦Mac⁩, כשהסמן בתיבת השיחה, התיעוד מציין ⁦Cmd+N⁩ או ⁦Cmd+R⁩ לשיחה חדשה. ב-⁦Windows⁩ וב-⁦Linux⁩ פותחים ⁦Keyboard Shortcuts⁩, מחפשים את הפעולה ⁦New Chat⁩, ומשתמשים בקיצור שמופיע אצלכם. אין כאן קיצור ⁦Ctrl+N⁩ מובטח.</div>
+          </div></div><div class="flip-card" tabindex="0" role="button" aria-label="Side Chat">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>⁦Side Chat⁩</h4><p>לא התחלה נקייה</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">שיחת צד נפתחת משיחה קיימת ונושאת הקשר ממנה, גם אם לא רואים את כל ההיסטוריה. לא לוחצים על פלוס אקראי ומניחים שההקשר נמחק.</div>
+          </div></div><div class="flip-card" tabindex="0" role="button" aria-label="הקבצים">
+          <div class="flip-card-inner">
+            <div class="flip-front"><h4>הקבצים</h4><p>נשארים במקום</p><span class="flip-hint">לחצו או עמדו על הכרטיס</span></div>
+            <div class="flip-back">⁦PLAN.md⁩, ⁦DESIGN.md⁩, ⁦index.html⁩, ⁦style.css⁩ ו-⁦assets⁩ נשארים. אחרי השינוי בודקים שוב ב-⁦Live Preview.⁩</div>
+          </div></div></div></div>
+<div class="reveal"><div class="callout warning"><i data-lucide="triangle-alert" class="icon-sm"></i><div class="callout-body"><strong>טעות נפוצה:</strong> לחשוב ששיחה חדשה מאפסת את התיקייה, או שכל כפתור פלוס הוא ⁦New Chat.⁩</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q8">
+      <div class="quiz-q">פותחים שיחה חדשה כדי לשנות משימה. מה קורה לקבצי ⁦my⁠-⁠first⁠-⁠site⁩?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">הם נשארים. השיחה לא מוחקת את התיקייה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">הם נמחקים, וצריך להריץ הכל מההתחלה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">רק ⁦PLAN.md⁩ נשמר, והדף נמחק.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. שיחה חדשה משנה את ההקשר של הבקשה. הקבצים שכבר נכתבו נשארים עד שמבקשים לשנות אותם." data-no="התיקייה היא ההקשר שנשאר. לא מתחילים מתיקייה ריקה רק כי נפתחה שיחה."></p>
+    </div></div>
+</div>
+<div class="step" id="step9"><div class="step-header"><span class="part-label">המשך</span><br><span class="step-number">שלב ⁦9⁩</span><h2 class="step-title">בודקים <span class="hl-underline">מה נכתב</span></h2><p class="step-desc">פותחים את הקבצים ומשווים לבחירה. ⁦Commit⁩ אינו דרך לבטל עריכה.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-sway"><rect x="64" y="24" width="120" height="86" rx="16" fill="#fff" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M84 50h80M84 68h64M84 86h72" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">לקריאת השינויים פותחים את ⁦Review⁩ וקוראים את הדיף: שורות שנוספו ושורות שנמחקו. אין צורך ב-⁦Find Issues⁩ כדי לראות את הדיף. ⁦Find Issues⁩ הוא ⁦Agent Review⁩ אופציונלי, בדיקת קוד נוספת, לא תנאי לקריאה. אין כאן מיקום מדויק של כפתור על המסך, ואין שמות ישנים של קבלה. ייתכן שהשינוי כבר נכתב לקובץ לפני שפתחתם את הדיף.</p></div>
+<div class="reveal"><div class="steps-list"><div class="step-card info"><img class="step-type-icon" src="assets/images/מוח%20ונורה%20איקון.svg?v=20261108b" alt="הסבר"><div class="step-card-body"><div class="step-who">⁦Save⁩</div><p>⁦Save⁩ כותב לדיסק את מה שפתוח בעורך. זו שמירת הקובץ הנוכחי, לא היסטוריה של גרסאות.</p></div></div><div class="step-card info"><img class="step-type-icon" src="assets/images/מוח%20ונורה%20איקון.svg?v=20261108b" alt="הסבר"><div class="step-card-body"><div class="step-who">⁦Commit⁩</div><p>⁦Commit⁩ רושם ב-⁦Git⁩ גרסה של השינויים שבחרתם לכלול. זו לא פרסום לאתר, ולא דרך לבטל עריכה.</p></div></div><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">⁦Review⁩</div><p>⁦Review⁩ מראה את הדיף. הוא לא ⁦Save⁩ ולא ⁦Commit⁩ ולא ⁦Checkpoint. Find Issues⁩ אינו נדרש כדי לקרוא אותו.</p></div></div><div class="step-card claude"><img class="step-type-icon" src="assets/images/קלוד%20עושה.svg?v=20261108b" alt="הסקיל עושה"><div class="step-card-body"><div class="step-who">⁦Restore Checkpoint⁩</div><p>עומדים על הודעת המשתמש שביקשה לשנות את צבע הכפתור. אם מוצע מצב קודם לבדיקה, קוראים אותו לפני האישור. ⁦Restore Checkpoint⁩ מחזיר שינויי קבצים של הסוכן שנעשו אחרי אותה הודעה, כשהשחזור חל עליהם. הטקסט של השיחה נשאר.</p></div></div></div></div>
+<div class="reveal"><p class="prompt-label">שינוי אחד לבדיקה</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">שנו רק את צבע הכפתור הראשי. השאירו את שאר הטקסטים ואת שאר החלקים.</span></div></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>מה אמור להיראות:</strong> ב-⁦Review⁩ רואים את שורות צבע הכפתור שהשתנו, בלי לפתוח את ⁦Find Issues.⁩ בתצוגה רואים את הצבע החדש. אחר כך עומדים על אותה בקשת צבע, בודקים את המצב המוקדם אם הוא מוצע, ובוחרים ⁦Restore Checkpoint.⁩ אם השחזור חל על הקובץ, הצבע חוזר. השיחה לא נמחקת. אם קובץ לא מופיע בשחזור, לא מניחים שכל סוג קובץ מכוסה. פרסום או שליחה החוצה לא מתבטלים.</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q9">
+      <div class="quiz-q">מה פותחים כדי לקרוא את הדיף?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">את ⁦Review. Find Issues⁩ הוא ⁦Agent Review⁩ אופציונלי, ולא נדרש כדי לקרוא את הדיף.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">את ⁦Commit⁩, כי הוא מחזיר את הקובץ אחורה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">את ⁦Save⁩, כי הוא מציג את השורות שנמחקו.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. ⁦Review⁩ הוא המקום לקרוא מה השתנה. ⁦Find Issues⁩ אינו נדרש לקריאת הדיף. ⁦Save⁩ שומר את הקובץ. ⁦Commit⁩ רושם גרסה ב-⁦Git. Checkpoint⁩ מחזיר שינויי קבצים של הסוכן כשהשחזור חל עליהם." data-no="⁦Save⁩ ו-⁦Commit⁩ עושים עבודה אחרת. הם לא תצוגת הדיף ולא שחזור."></p>
+    </div></div>
+</div>
+<div class="step" id="step10"><div class="step-header"><span class="part-label">המשך</span><br><span class="step-number">שלב ⁦10⁩</span><h2 class="step-title">סקיל לחוד, <span class="hl-underline">חוק</span> לחוד</h2><p class="step-desc">סקיל הוא דרך עבודה למשימה. חוק הוא הנחיה נפרדת לפרויקט הזה. המעצב בערכה לא יוצר חוק.</p></div>
+<div class="reveal"><p class="lead-note">סקיל הוא דרך עבודה למשימה. חוק הוא הנחיה נפרדת לפרויקט הזה, בקובץ משלו תחת <bdi dir="ltr" class="ltr-path">.cursor/rules</bdi>. סקיל בלי הסימון המיוחד יכול להיבחר אוטומטית לפי התיאור. שני הסקילים כאן מפורשים כי השדה ⁦disable⁠-⁠model⁠-⁠invocation⁩ שווה ⁦true.⁩ המעצב לא יוצר את החוק. העיצוב נשמר בדף גם בלי חוק.</p></div>
+<div class="reveal"><div class="concept-row two"><div class="concept-card" tabindex="0" role="button" aria-label="משימה">
+          <div class="concept-card-inner">
+            <div class="concept-front"><div class="concept-eyebrow">סקיל</div><div class="concept-term concept-he">משימה</div><div class="concept-hint">לחצו לפירוש</div></div>
+            <div class="concept-back">בלי ⁦disable⁠-⁠model⁠-⁠invocation: true⁩ סוכן עשוי לבחור סקיל בעצמו. בערכה השדה הזה הוא ⁦true⁩, ולכן בוחרים /⁦architect⁩ או /⁦designer.⁩</div>
+          </div></div><div class="concept-card" tabindex="0" role="button" aria-label="הנחיה">
+          <div class="concept-card-inner">
+            <div class="concept-front"><div class="concept-eyebrow">חוק</div><div class="concept-term concept-he">הנחיה</div><div class="concept-hint">לחצו לפירוש</div></div>
+            <div class="concept-back">חוק של פרויקט חל על התיקייה הזו, לא על כל המחשב ולא על צוות. הוא טקסט, לא מנעול, ואין הבטחה שיישמע.</div>
+          </div></div></div></div>
+<div class="reveal"><div class="settings-accordion"><div class="settings-item open">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="true">
+            <div class="settings-icon"><i data-lucide="list"></i></div>
+            <div class="settings-item-title">ארבע דרכי תחולה</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>⁦alwaysApply: true⁩ נכלל בכל שיחה בפרויקט, גם אם יש ⁦globs⁩ או ⁦description.⁩</p><p>⁦alwaysApply: false⁩ עם ⁦globs⁩ נכלל כשקובץ תואם נמצא בהקשר, לא רק כי הקובץ קיים בדיסק.</p><p>⁦alwaysApply: false⁩ עם ⁦description⁩ ובלי ⁦globs:⁩ הסוכן מחליט לפי הרלוונטיות.</p><p>⁦alwaysApply: false⁩ בלי ⁦description⁩ ובלי ⁦globs:⁩ רק כשמזכירים את החוק עם @.</p></div></div></div><div class="settings-item">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="false">
+            <div class="settings-icon"><i data-lucide="file-text"></i></div>
+            <div class="settings-item-title">אזכור אינו הדבקה</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>אם חוק מזכיר את ⁦DESIGN.md⁩, זה לא מדביק את כל תוכן הקובץ לכל הודעה. מה שחייב להופיע תמיד נכתב בגוף החוק.</p></div></div></div><div class="settings-item">
+          <button type="button" class="settings-item-head" onclick="toggleSettingsItem(this)" aria-expanded="false">
+            <div class="settings-icon"><i data-lucide="ban"></i></div>
+            <div class="settings-item-title">המעצב לא כותב חוק</div>
+            <i data-lucide="chevron-down" class="settings-chevron"></i>
+          </button>
+          <div class="settings-item-panel"><div class="settings-item-panel-inner"><p>הוא לא יוצר קובץ ב-<bdi dir="ltr" class="ltr-path">.cursor/rules</bdi>, ולא מחליף את ⁦architect⁩ או את ⁦designer.⁩ בתרגיל הזה יוצרים את החוק ידנית בסייר הקבצים.</p></div></div></div></div></div>
+<div class="reveal"><p class="lead-note">המסלול כאן ידני. בסייר יוצרים את התיקייה ואת הקובץ, מדביקים את התוכן, ושומרים. מוודאים שהקובץ קיים, ורק אחר כך פותחים שיחה חדשה.</p></div>
+<div class="reveal"><div class="steps-list"><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">תיקיית ⁦rules⁩</div><p>בסייר, בתוך <bdi dir="ltr" class="ltr-path">.cursor</bdi>, יוצרים תיקייה חדשה בשם ⁦rules.⁩ אם <bdi dir="ltr" class="ltr-path">.cursor/rules</bdi> כבר קיימת, משתמשים בה ולא יוצרים כפיל.</p></div></div><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">הקובץ</div><p>בתוך <bdi dir="ltr" class="ltr-path">.cursor/rules</bdi> יוצרים קובץ חדש בשם ⁦hebrew⁠-⁠check.mdc.⁩ מדביקים לתוכו את הבלוק שלמטה, כולל שתי שורות של שלושה מקפים.</p></div></div><div class="step-card user"><img class="step-type-icon" src="assets/images/אתם%20עושים%20איקון.svg?v=20261108b" alt="אתם עושים"><div class="step-card-body"><div class="step-who">שמירה</div><p>שומרים עם ⁦Save.⁩ ב-⁦Windows⁩ וב-⁦Linux⁩ זה ⁦Ctrl+S⁩, וב-⁦Mac⁩ זה ⁦Cmd+S.⁩ לפני שיחה חדשה מוודאים שבסייר מופיע <bdi dir="ltr" class="ltr-path">.cursor/rules/hebrew-check.mdc</bdi>.</p></div></div><div class="step-card info"><img class="step-type-icon" src="assets/images/מוח%20ונורה%20איקון.svg?v=20261108b" alt="הסבר"><div class="step-card-body"><div class="step-who">הסקילים נשארים</div><p>לא עורכים ולא מחליפים את <bdi dir="ltr" class="ltr-path">.cursor/skills/architect/SKILL.md</bdi> ואת <bdi dir="ltr" class="ltr-path">.cursor/skills/designer/SKILL.md</bdi>.</p></div></div></div></div>
+<div class="reveal"><p class="prompt-label">תוכן הקובץ <bdi dir="ltr" class="ltr-path">.cursor/rules/hebrew-check.mdc</bdi></p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">---
+⁦alwaysApply: true⁩
+---
+ענו בעברית פשוטה.
+אחרי כל שינוי כתבו משפט אחד: מה השתנה.</span></div><p class="prompt-label">בדיקה בשיחה חדשה ועצמאית, לא ב-⁦Side Chat⁩</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">שנו מילה אחת בכותרת של ⁦index.html.⁩</span></div></div>
+<div class="reveal"><div class="callout tip"><i data-lucide="lightbulb" class="icon-sm"></i><div class="callout-body"><strong>מה אמור להיראות:</strong> לפני השיחה, הקובץ <bdi dir="ltr" class="ltr-path">.cursor/rules/hebrew-check.mdc</bdi> שמור ומופיע בסייר. בשיחה החדשה והעצמאית, לא ב-⁦Side Chat⁩, התשובה בעברית ויש בה משפט אחד על מה שהשתנה. אם התשובה אינה כזו, הסוכן לא פעל לפי ההנחיה בבדיקה הזו; בדקו שהקובץ נשמר ושהתחולה נכונה. גם אז אין הבטחת ציות. הדף לא אמור להישבר כדי להוכיח את החוק.</div></div></div>
+<div class="reveal"><div class="quiz-card" id="q10">
+      <div class="quiz-q">מתי חוק עם ⁦alwaysApply: true⁩ נכלל?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">בכל שיחה בפרויקט הזה, גם אם יש לידו ⁦globs⁩ או ⁦description.⁩</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">רק כשהקובץ התואם נמצא בדיסק, גם אם אינו בהקשר.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">המעצב יוצר אותו אוטומטית במקום הדף.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. ⁦true⁩ גובר על ⁦globs⁩ ועל ⁦description.⁩ זה חוק של הפרויקט הפתוח, לא של כל המחשב." data-no="קובץ שנמצא רק בדיסק אינו מספיק למצב של ⁦globs.⁩ והמעצב בערכה לא יוצר חוק."></p>
+    </div></div>
+</div>
+<div class="step" id="step11"><div class="step-header"><span class="part-label">תרגול</span><br><span class="step-number">שלב ⁦11⁩</span><h2 class="step-title">תרגול <span class="hl-underline">קצר</span></h2><p class="step-desc">עוברים את המסלול על דף נחיתה קטן, ובודקים את הקבצים ואת התצוגה.</p></div><div class="reveal"><div class="pg-anim" aria-hidden="true"><svg class="mark" viewBox="0 0 280 128"><g class="m-sway"><path d="M40 86c36-36 70-8 104-26 30-16 52-6 96-34" fill="none" stroke="#5b3f86" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="52" cy="80" r="12" fill="#5CE1E6" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="150" cy="52" r="12" fill="#FFD6EE" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="220" cy="30" r="14" fill="#FF5BC0" stroke="#1a295b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div></div>
+<div class="reveal"><p class="lead-note">בונים דף נחיתה קצר לדוגמה, למשל לסדנה. עונים על שלוש השאלות, בוחרים כיוון אחד, ובודקים קבצים ותצוגה. אחר כך משנים פרט אחד.</p></div>
+<div class="reveal"><p class="prompt-label">ניסוח לתרגול, אחרי שהדף כבר קיים</p><div class="prompt-block">
+      <button type="button" class="prompt-copy-btn" onclick="copyPrompt(this)"><i data-lucide="copy"></i><span>העתק</span></button>
+      <span class="prompt-text">שנו רק את צבע הכפתור הראשי. השאירו את שאר הטקסטים ואת שאר החלקים.</span></div></div>
+<div class="reveal"><div class="quiz-card" id="q11a">
+      <div class="quiz-q">מה הסדר בערכה הזו?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">תיקייה, /⁦architect⁩ ו-⁦PLAN.md⁩, /⁦designer⁩ ובחירת כיוון, ואז קבצי הדף והתצוגה.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">קודם בקשת בנייה, ורק אחר כך שאלות.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">קודם חוק עיצוב, ורק אחר כך תוכנית.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. התוכנית קודמת לעיצוב, והעיצוב כולל את בניית הדף." data-no="אין שלב בנייה נפרד כחובה, ואין חוק לפני התוכנית."></p>
+    </div></div>
+<div class="reveal"><div class="quiz-card" id="q11b">
+      <div class="quiz-q">שיניתם רק את צבע הכפתור. מה בודקים?</div><div class="quiz-opts"><button type="button" class="quiz-opt" data-ok="1" onclick="quizPick(this)">שהכפתור השתנה, ושאר הדף נשאר לפי התוכנית.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">שנפתחה תיקייה חדשה בלי הקבצים הקודמים.</button><button type="button" class="quiz-opt" data-ok="0" onclick="quizPick(this)">שנוצר קובץ חוק כדי שהצבע יישמר.</button></div>
+      <p class="quiz-fb" aria-live="polite" data-ok="נכון. שינוי אחד נבדק מול מה שביקשתם להשאיר. הקבצים הקיימים הם ההקשר." data-no="הצבע נשמר בקובצי הדף. לא צריך תיקייה חדשה ולא חוק בשביל הבדיקה הזו."></p>
+    </div></div>
+</div>
+    </div></main>
+  </div>
+</div>
+<nav class="bottom-nav" id="bottomNav" aria-label="ניווט בין שלבים">
+  <button type="button" class="nav-btn hidden" id="prevBtn" onclick="prevStep()"><i data-lucide="chevron-right" class="icon-sm"></i> הקודם</button>
+  <button type="button" class="nav-btn primary" id="nextBtn" onclick="nextStep()">הבא <i data-lucide="chevron-left" class="icon-sm"></i></button>
+</nav>
+<section class="completion" id="completion">
+  <div class="logo-bar" style="position:fixed;top:0;left:0;right:0;z-index:500;"><img class="logo-bar-center" src="assets/images/LogoBanner.svg?v=20261108b" alt="Let's AI"></div>
+  <video class="completion-video" muted playsinline preload="metadata"><source src="assets/videos/finalvideo.mp4?v=20261108b" type="video/mp4"></video>
+  <img class="completion-mascot left" src="assets/images/קלוד%20עושה.svg?v=20261108b" alt="">
+  <img class="completion-mascot right" src="assets/images/קלוד%20עושה.svg?v=20261108b" alt="">
+  <div class="completion-content">
+    <p class="completion-goodluck">בהצלחה</p>
+    <div class="completion-actions"><button type="button" class="completion-btn secondary" onclick="restartTutorial()"><i data-lucide="rotate-ccw" class="icon-sm"></i> חזרה להתחלה</button></div>
+  </div>
+</section>
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button type="button" class="lightbox-close" onclick="closeLightbox(event)" aria-label="סגירה"><i data-lucide="x"></i></button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+<div class="gloss" id="gloss" hidden role="dialog" aria-modal="true" aria-labelledby="glossTitle">
+  <div class="gloss-panel"><div class="gloss-head"><h2 id="glossTitle">מילון מושגים</h2>
+  <button type="button" class="gloss-close" onclick="closeGloss()" aria-label="סגירת המילון"><i data-lucide="x"></i></button></div>
+  <label class="gl-search"><i data-lucide="search" class="icon-sm"></i>
+  <input id="glSearch" type="search" placeholder="חיפוש מונח" oninput="glFilter(this.value)" aria-label="חיפוש במילון"></label>
+  <div class="gl-grid"><article class="gl-card" data-term="תיקיית פרויקט התיקייה שנפתחת ב-Open project. בתרגיל זו my-first-site. פתיחתה אינה פרסום אתר."><h3>תיקיית פרויקט</h3><p>התיקייה שנפתחת ב-⁦Open project.⁩ בתרגיל זו ⁦my⁠-⁠first⁠-⁠site.⁩ פתיחתה אינה פרסום אתר.</p></article><article class="gl-card" data-term="Agent מצב השיחה שיכול גם לכתוב קבצים. מצב Ask מיועד להסבר בלי עריכה."><h3>Agent</h3><p>מצב השיחה שיכול גם לכתוב קבצים. מצב ⁦Ask⁩ מיועד להסבר בלי עריכה.</p></article><article class="gl-card" data-term="סקיל דרך עבודה בקובץ SKILL.md. בלי השדה המיוחד סוכן עשוי לבחור סקיל לבד. בערכה השדה true, ולכן בוחרים במפורש."><h3>סקיל</h3><p>דרך עבודה בקובץ ⁦SKILL.md.⁩ בלי השדה המיוחד סוכן עשוי לבחור סקיל לבד. בערכה השדה ⁦true⁩, ולכן בוחרים במפורש.</p></article><article class="gl-card" data-term="architect הסקיל ששואל שלוש שאלות וכותב רק PLAN.md."><h3>architect</h3><p>הסקיל ששואל שלוש שאלות וכותב רק ⁦PLAN.md.⁩</p></article><article class="gl-card" data-term="designer הסקיל שקורא את PLAN.md, מציע שלושה כיוונים ואפשרות אחר, ובונה את הדף."><h3>designer</h3><p>הסקיל שקורא את ⁦PLAN.md⁩, מציע שלושה כיוונים ואפשרות אחר, ובונה את הדף.</p></article><article class="gl-card" data-term="PLAN.md תוכנית באנגלית בשורש התיקייה. זה הקובץ היחיד ש-architect כותב."><h3>PLAN.md</h3><p>תוכנית באנגלית בשורש התיקייה. זה הקובץ היחיד ש-⁦architect⁩ כותב.</p></article><article class="gl-card" data-term="DESIGN.md סיכום הכיוון שנבחר, באנגלית. נכתב יחד עם בניית הדף."><h3>DESIGN.md</h3><p>סיכום הכיוון שנבחר, באנגלית. נכתב יחד עם בניית הדף.</p></article><article class="gl-card" data-term="Live Preview תוסף של ms-vscode להצגת index.html על המחשב. זה אינו Live Server."><h3>Live Preview</h3><p>תוסף של ⁦ms⁠-⁠vscode⁩ להצגת ⁦index.html⁩ על המחשב. זה אינו ⁦Live Server.⁩</p></article><article class="gl-card" data-term="assets תיקיית קבצים, למשל תמונות, והיא אחות של .cursor בתוך my-first-site."><h3>assets</h3><p>תיקיית קבצים, למשל תמונות, והיא אחות של <bdi dir="ltr" class="ltr-path">.cursor</bdi> בתוך ⁦my⁠-⁠first⁠-⁠site.⁩</p></article><article class="gl-card" data-term="שיחה חדשה הפעולה New Chat. לא Side Chat ולא כל כפתור פלוס. הקבצים בתיקייה נשארים."><h3>שיחה חדשה</h3><p>הפעולה ⁦New Chat.⁩ לא ⁦Side Chat⁩ ולא כל כפתור פלוס. הקבצים בתיקייה נשארים.</p></article><article class="gl-card" data-term="Checkpoint שחזור שינויי קבצים של הסוכן מהודעה קודמת. לא מוחק את השיחה ולא מבטל פרסום."><h3>Checkpoint</h3><p>שחזור שינויי קבצים של הסוכן מהודעה קודמת. לא מוחק את השיחה ולא מבטל פרסום.</p></article><article class="gl-card" data-term="חוק הנחיית פרויקט בקובץ נפרד. true חל תמיד. שאר המצבים תלויים בהקשר, בתיאור, או באזכור. לא מנעול."><h3>חוק</h3><p>הנחיית פרויקט בקובץ נפרד. ⁦true⁩ חל תמיד. שאר המצבים תלויים בהקשר, בתיאור, או באזכור. לא מנעול.</p></article></div>
+  <p class="gl-empty" id="glEmpty">אין מונח שמתאים לחיפוש.</p></div></div>
+<script>window.MODULE_CONFIG = {"title": "cursor nice to meet", "description": "cursor nice to meet. מדריך בעברית: תיקיית my-first-site, שני סקילים מוכנים, ודף מקומי.", "totalSteps": 11, "hero": {"eyebrow": "CURSOR", "title": "cursor nice to meet", "subtitle": "תיקייה, שני סקילים, ודף", "lead": "מתקינים, פותחים תיקייה מוכנה בשם ⁦my⁠-⁠first⁠-⁠site⁩, מפעילים ⁦architect⁩ ואז ⁦designer⁩, ובודקים דף מקומי. הסקילים כבר כתובים בערכת התרגיל.", "badge": "תרגיל מעשי", "cta": "בואו נתחיל"}, "navGroups": [{"icon": "folder-open", "title": "הכנה", "steps": ["התקנה וכניסה", "תיקיית התרגיל"]}, {"icon": "panels-top-left", "title": "חלון", "steps": ["שלושה אזורים", "תצוגה מקומית"]}, {"icon": "hammer", "title": "בנייה", "steps": ["תוכנית", "עיצוב ובנייה", "הדף במחשב"]}, {"icon": "split", "title": "המשך", "steps": ["שינוי ושיחה", "בדיקת קבצים", "סקיל וחוק"]}, {"icon": "flag", "title": "תרגול", "steps": ["תרגול קצר"]}], "steps": [{"number": "שלב 1", "titleHtml": "מתקינים ו<span class=\"hl-underline\">נכנסים</span>", "desc": "קורסור הוא החלון שבו התיקייה, הקבצים והשיחה עם הסוכן יושבים יחד. בלי כניסה אין תרגיל."}, {"number": "שלב 2", "titleHtml": "תיקייה <span class=\"hl-underline\">מוכנה</span> לתרגיל", "desc": "התרגיל מתחיל מתיקייה בשם ⁦my⁠-⁠first⁠-⁠site.⁩ שני הסקילים כבר כתובים. לא כותבים אותם בעצמכם."}, {"number": "שלב 3", "titleHtml": "פותחים ומזהים <span class=\"hl-underline\">שלושה אזורים</span>", "desc": "⁦Open project⁩ בוחר את תיקיית העבודה. אחר כך מזהים עץ קבצים, עורך, ושיחת ⁦Agent.⁩"}, {"number": "שלב 4", "titleHtml": "<span class=\"hl-underline\"><bdi dir=\"ltr\">Live Preview</bdi></span> לתרגיל", "desc": "כדי לראות את הדף שנוצר, פותחים את ⁦index.html⁩ בתוסף ⁦Live Preview⁩ של ⁦Microsoft.⁩"}, {"number": "שלב 5", "titleHtml": "שאלות, ואז <span class=\"hl-underline\"><bdi dir=\"ltr\">PLAN.md</bdi></span>", "desc": "⁦architect⁩ שואל שלוש שאלות בעברית וכותב תוכנית באנגלית. הוא לא כותב את קוד האתר."}, {"number": "שלב 6", "titleHtml": "כיוון, ואז <span class=\"hl-underline\">הדף</span>", "desc": "⁦designer⁩ קורא את התוכנית, מציע שלושה כיוונים ועוד בחירה חופשית, ואחרי הבחירה בונה את הדף."}, {"number": "שלב 7", "titleHtml": "רואים את הדף <span class=\"hl-underline\">במחשב</span>", "desc": "התצוגה מקומית. טופס על הדף הוא חלק מהעמוד, והוא לא מוכיח שרת ששומר פניות."}, {"number": "שלב 8", "titleHtml": "שינוי אחד, <span class=\"hl-underline\">הקבצים נשארים</span>", "desc": "שיחה חדשה מתאימה למשימה חדשה. התיקייה לא מתאפסת כשפותחים שיחה."}, {"number": "שלב 9", "titleHtml": "בודקים <span class=\"hl-underline\">מה נכתב</span>", "desc": "פותחים את הקבצים ומשווים לבחירה. ⁦Commit⁩ אינו דרך לבטל עריכה."}, {"number": "שלב 10", "titleHtml": "סקיל לחוד, <span class=\"hl-underline\">חוק</span> לחוד", "desc": "סקיל הוא דרך עבודה למשימה. חוק הוא הנחיה נפרדת לפרויקט הזה. המעצב בערכה לא יוצר חוק."}, {"number": "שלב 11", "titleHtml": "תרגול <span class=\"hl-underline\">קצר</span>", "desc": "עוברים את המסלול על דף נחיתה קטן, ובודקים את הקבצים ואת התצוגה."}], "completion": {"goodluck": "בהצלחה"}};</script>
+<script src="js/system.js?v=20261108b"></script>
+<script src="js/module.js?v=20261108b"></script>
+</body></html>
